@@ -54,30 +54,18 @@ int dfs(int root, vector<int>& file_size, unordered_map<int, vector<int>> childs
 }
 
 void helper(vector<int> parent, vector<int> file_size) {
-	/*
-    for(int i = 0; i < file_size.size(); i++) {
-		treeSum += file_size[i];
-	}*/
 	treeSum = accumulate(file_size.begin(), file_size.end(), 0);
 	unordered_map<int, vector<int>> childs;
 	for(int i = 0; i < parent.size(); i++) {
 		childs[parent[i]].emplace_back(i);
 	}
-	/* 
-	  [-1, 0]
-	  [0, 1]
-	  [0, 2]
-	  [1, 3]
-	  [1, 4]
-	*/
-	
 	dfs(0, file_size, childs);
 }
 
 int main(int argc, char const *argv[])
 {
 	vector<int> parent = {-1, 0, 0, 1, 1};
-	vector<int> file_size = {1, 2, 3, 4, 5};
+	vector<int> file_size = {1, 2, 3, 5, 6};
 	helper(parent, file_size);
 	cout << "minDiff = " << minDiff << "\n";
 
