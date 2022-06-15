@@ -4,15 +4,16 @@ An employee has to work exactly as many hours as they are told to each week, sch
 
 A completed schedule consists of exactly 7 digits in the range 0 to 8 that represent each day's hours to be worked. A pattern string similar to the schedule will be given, but with some of the digits replaced by a question mark, ?, (ascii 63 decimal). Given a maximum number of hours that can be worked in a day, replace the question marks with digits so that the sum of the scheduled hours is exactly the hours that must be worked in a week.
 
-**Example**
-pattern = "08??840"
-workHours = 24
-dayHours = 4
-There are two days on which they must work 24 - 20 = 4 more hours for the week. All of the possible schedules are listed below:
-0804840
-0813840
-0822840
-0831840
+**Example**  
+pattern = "08??840"  
+workHours = 24  
+dayHours = 4  
+
+There are two days on which they must work 24 - 20 = 4 more hours for the week. All of the possible schedules are listed below:  
+0804840  
+0813840  
+0822840  
+0831840  
 0840840
 
 ```cpp
